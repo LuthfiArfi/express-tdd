@@ -7,23 +7,11 @@ const chai      = require('chai'),
 chai.use(chaiHttp);
 
 before(function(done) {
-  clearTodo()
-    .then(function() {
-      done();
-    })
-    .catch(function(err) {
-
-    });
+  clearTodo(done)
 });
 
 after(function(done) {
-  clearTodo()
-    .then(function() {
-      done();
-    })
-    .catch(function(err) {
-
-    });
+  clearTodo(done);
 });
 
 describe('Todo tests', function() {
