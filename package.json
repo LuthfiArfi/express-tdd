@@ -2,7 +2,7 @@
   "name": "express-tdd",
   "version": "1.0.0",
   "description": "TDD example for educational purposes",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha --exit"
   },
