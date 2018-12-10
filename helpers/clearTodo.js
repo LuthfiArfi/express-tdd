@@ -1,12 +1,14 @@
 const Todo = require('../models/todo');
 
 module.exports = function(done) {
-  Todo
-    .deleteMany({})
-    .then(function() {
-      done();
-    })
-    .catch(function(err) {
-      console.log(err);
-    });
+  if (process.env.NODE_ENV === 'test') {
+    Todo
+      .deleteMany({})
+      .then(function() {
+        done();
+      })
+      .catch(function(err) {
+        console.log(err);
+      });
+  }
 };
